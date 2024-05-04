@@ -3,16 +3,22 @@ import os.path
 import csv
 
 from colored import Fore, Back, Style
+import emoji
 
 
 file_name = "contactbook.csv"
 choice = ""
 
-print(f"{Fore.white}{Back.blue}Welcome To Your Contact Book{Style.reset}")
+print(emoji.emojize(f"{Fore.white}{Back.blue}Welcome To Your Contact Book :waving_hand:{Style.reset}"))
 
 def menu():
     """Main Menu Function."""
-    print(" 1. Add New Contact \n 2. Search Contacts \n 3. View Contacts \n 4. Edit Contacts \n 5. Delete Contacts \n 6. Exit ")
+    print("1. Add New Contacts")
+    print("2. Search Contacts")
+    print("3. View Contacts")
+    print("4. Edit Contacts")
+    print("5. Delete Contacts")
+    print((f"6. {Fore.white}{Back.red}Exit{Style.reset}"))
 
     user_choice = input("Enter Your Selection ")
     return user_choice
@@ -35,7 +41,7 @@ def add_contact(file_name):
     with open(file_name, mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(contact_details)
-    print("Contact added successfully.")
+    print(emoji.emojize("Contact added successfully. :smiling_face:"))
 
 def search_contacts(file_path, search_query):
     """Search Contact function."""
@@ -46,7 +52,7 @@ def search_contacts(file_path, search_query):
             if matches:
                 for index, match in enumerate(matches, start=1):
                     print(f"Match {index}: Name: {match[0]}, Phone Number: {match[1]}, Email: {match[2]}, Address: {match[3]}")
-            else: print("No contacts found matching your search.")
+            else: print(emoji.emojize("No contacts found matching your search. :frowning_face:"))
     except FileNotFoundError:
         print("No contacts file found. Please add some contacts first.")
 
@@ -84,7 +90,7 @@ def delete_contact(file_path):
             writer = csv.writer(file)
             writer.writerows(contacts)
 
-        print("Contact deleted successfully.")
+        print(emoji.emojize("Contact deleted successfully. :thumbs_up:"))
     except FileNotFoundError:
         print("No contacts file found. Please add some contacts first.")
     except ValueError:
@@ -140,6 +146,6 @@ while choice != "6":
     elif (choice == "5"):
         delete_contact(file_name)
     elif (choice == "6"):
-        print("Thank You For Using Our Contact Book")
+        print(emoji.emojize(f"{Fore.white}{Back.blue}Thank You For Using Our Contact Book{Style.reset} :waving_hand:"))
     else:
         print("Please Select One Of The Options Below")
