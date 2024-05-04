@@ -1,3 +1,4 @@
+"""A Simple Contact Book."""
 import os.path
 import csv
 
@@ -10,6 +11,7 @@ choice = ""
 print(f"{Fore.white}{Back.blue}Welcome To Your Contact Book{Style.reset}")
 
 def menu():
+    """Main Menu Function."""
     print(" 1. Add New Contact \n 2. Search Contacts \n 3. View Contacts \n 4. Edit Contacts \n 5. Delete Contacts \n 6. Exit ")
 
     user_choice = input("Enter Your Selection ")
@@ -24,6 +26,7 @@ if not os.path.isfile(file_name):
 
 
 def add_contact(file_name):
+    """Add Contact Function."""
     name = input("Enter the contact's name: ")
     phone_number = input("Enter the contact's phone number: ")
     email = input("Enter the contact's email: ")
@@ -33,8 +36,9 @@ def add_contact(file_name):
         writer = csv.writer(file)
         writer.writerow(contact_details)
     print("Contact added successfully.")
-    
+
 def search_contacts(file_path, search_query):
+    """Search Contact function."""
     try:
         with open(file_path, mode='r', newline='') as file:
             reader = csv.reader(file)
@@ -42,11 +46,12 @@ def search_contacts(file_path, search_query):
             if matches:
                 for index, match in enumerate(matches, start=1):
                     print(f"Match {index}: Name: {match[0]}, Phone Number: {match[1]}, Email: {match[2]}, Address: {match[3]}")
-            else:print("No contacts found matching your search.")
+            else: print("No contacts found matching your search.")
     except FileNotFoundError:
         print("No contacts file found. Please add some contacts first.")
 
 def view_contacts(file_path):
+    """View Contact Function."""
     try:
         with open(file_path, mode='r', newline='') as file:
             reader = csv.reader(file)
@@ -54,20 +59,21 @@ def view_contacts(file_path):
                 print(f"Contact {index} Name: {row[0]}\t Phone Number: {row[1]}\t Email: {row[2]}\t Address: {row[3]}")
     except FileNotFoundError:
         print("No Contacts Found. Add some contacts first.")
-    
+
 def delete_contact(file_path):
+    """Delete Contact Functiion."""
     try:
         with open(file_path, mode='r', newline='') as file:
             reader = csv.reader(file)
             contacts = list(reader)
-        
+
         if not contacts:
             print("No contacts available to delete.")
             return
         print("Select a contact to delete:")
         for index, contact in enumerate(contacts, start=1):
             print(f"{index}: Name: {contact[0]}, Phone Number: {contact[1]}, Email: {contact[2]}, Address: {contact[3]}")
-        
+
         contact_index = int(input("Enter the number of the contact to delete: ")) - 1
 
         if contact_index < 0 or contact_index >= len(contacts):
@@ -86,11 +92,12 @@ def delete_contact(file_path):
 
 
 def edit_contact(file_path):
+    """Edit Contact Function."""
     try:
         with open(file_path, mode='r', newline='') as file:
             reader = csv.reader(file)
             contacts = list(reader)
-        
+
         if not contacts:
             print("No contacts available to edit.")
             return
@@ -116,24 +123,16 @@ def edit_contact(file_path):
         print("No contacts file found. Please add some contacts first.")
     except ValueError:
         print("Invalid input. Please enter a numeric value.")
-
-
-        
-        
-    
-
-
-
 while choice != "6":
     choice = menu()
-    
+
     if (choice == "1"):
         print("If Info N/A, Leave Empty And Press Enter")
         add_contact(file_name)
     elif (choice == "2"):
         search_query = input("Enter Contacts Name: ")
         search_contacts(file_name, search_query) 
-        
+
     elif (choice == "3"):
         view_contacts(file_name)
     elif (choice == "4"):
@@ -144,4 +143,3 @@ while choice != "6":
         print("Thank You For Using Our Contact Book")
     else:
         print("Please Select One Of The Options Below")
-
