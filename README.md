@@ -60,6 +60,9 @@ This terminal app uses the following python libraries:
 Below will be instructions on how to use the contact book. these instruction will be for after the app has been installed (via above) and the app is present in the terminal.
 
 Starting with #1 Add New Contacts:
+
 After selecting 1. user will be prompted with ``Add Contacts Name`` `` Add Contacts Phone Number`` `` Add Contacts Email`` `` Add Contacts Address`` You will be required to enter in each field with the intended contacts info. if you wish to leave a field blank press ``ENTER``. If done correctly you will be propted with ``Contact Added Successfully`` and taken back to the main menu.
 
 #2 Search Contacts
+
+After selecting #2 the user will be prompted with ``Enter Contacts Name``. After the user inputs the contacts name, the app will list all contacts with that name one after the other. Each Contact will list their Name, Phone Number, Email and Address if the user has filled in those fields, if not, next to each field will be blank.
