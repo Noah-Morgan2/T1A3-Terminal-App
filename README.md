@@ -7,3 +7,4 @@ https://trello.com/invite/b/DYG0gN5B/ATTI96e347928dbf5aa7480f4c0f30fa08c9F3D43A8
 
 ## GitHub
 https://github.com/Noah-Morgan2/T1A3-Terminal-App
+s
