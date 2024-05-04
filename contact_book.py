@@ -107,14 +107,14 @@ def edit_contact(file_path):
         if not contacts:
             print("No contacts available to edit.")
             return
-        print("Select a contact to edit:")
+        print("Select A Contact To Edit:")
         for index, contact in enumerate(contacts, start=1):
             print(f"{index}: Name: {contact[0]}, Phone Number: {contact[1]}, Email: {contact[2]}, Address: {contact[3]}")
         contact_index = int(input("Enter the number of the contact to edit: ")) - 1
         if contact_index < 0 or contact_index >= len(contacts):
             print("Invalid contact number.")
             return
-        print("Enter new details for the contact. Press ENTER to skip editing a field.")
+        print("Enter New Details For The Contact. Press ENTER To Skip Editing A Field.")
         name = input(f"Name [{contacts[contact_index][0]}]: ") or contacts[contact_index][0]
         phone_number = input(f"Phone Number [{contacts[contact_index][1]}]: ") or contacts[contact_index][1]
         email = input(f"Email [{contacts[contact_index][2]}]: ") or contacts[contact_index][2]
@@ -124,11 +124,11 @@ def edit_contact(file_path):
             writer = csv.writer(file)
             writer.writerows(contacts)
 
-        print("Contact updated successfully.")
+        print("Contact Updated Successfully.")
     except FileNotFoundError:
         print("No contacts file found. Please add some contacts first.")
     except ValueError:
-        print("Invalid input. Please enter a numeric value.")
+        print("Invalid Input. Please Enter A Numeric Value.")
 while choice != "6":
     choice = menu()
 

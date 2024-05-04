@@ -65,4 +65,12 @@ After selecting 1. user will be prompted with ``Add Contacts Name`` `` Add Conta
 
 #2 Search Contacts
 
-After selecting #2 the user will be prompted with ``Enter Contacts Name``. After the user inputs the contacts name, the app will list all contacts with that name one after the other. Each Contact will list their Name, Phone Number, Email and Address if the user has filled in those fields, if not, next to each field will be blank.
+After selecting #2 the user will be prompted with ``Enter Contacts Name``. After the user inputs the contacts name, the app will list all contacts with that name one after the other. Each Contact will list their Name, Phone Number, Email and Address if the user has filled in those fields, if not, next to each field will be blank. the user also get looped back to the main menu after all contacts have been displayed.
+
+#3 View Contacts
+
+After Selecting #3 the terminal will display all saved contacts(unlike #2 where it only displays one name). The user will not be prompted with anything and be looped back to the main menu.
+
+#4 Edit Contacts
+
+After Selecting #4 the user will be able to edit their contacts. First they will be prompted with `` Select A Contact To Edit
