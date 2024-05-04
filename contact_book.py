@@ -1,13 +1,13 @@
 import os.path
 import csv
 
-
+from colored import Fore, Back, Style
 
 
 file_name = "contactbook.csv"
 choice = ""
 
-print("welcome To Your Contact Book")
+print(f"{Fore.white}{Back.blue}Welcome To Your Contact Book{Style.reset}")
 
 def menu():
     print(" 1. Add New Contact \n 2. Search Contacts \n 3. View Contacts \n 4. Edit Contacts \n 5. Delete Contacts \n 6. Exit ")
