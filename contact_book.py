@@ -110,7 +110,7 @@ def edit_contact(file_path):
         print("Select A Contact To Edit:")
         for index, contact in enumerate(contacts, start=1):
             print(f"{index}: Name: {contact[0]}, Phone Number: {contact[1]}, Email: {contact[2]}, Address: {contact[3]}")
-        contact_index = int(input("Enter the number of the contact to edit: ")) - 1
+        contact_index = int(input("Enter The Number Of The Contact To Edit: ")) - 1
         if contact_index < 0 or contact_index >= len(contacts):
             print("Invalid contact number.")
             return

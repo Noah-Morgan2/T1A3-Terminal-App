@@ -73,4 +73,6 @@ After Selecting #3 the terminal will display all saved contacts(unlike #2 where 
 
 #4 Edit Contacts
 
-After Selecting #4 the user will be able to edit their contacts. First they will be prompted with `` Select A Contact To Edit
+After Selecting #4 the user will be able to edit their contacts. First they will be prompted with `` Select A Contact To Edit`` follow by a numerical list with all saved contacts. the user will then be prompted with ``Enter The Number Of The Contact To Edit`` where, after entered said number, the user will be able to enter new fields for the selected contact. If the user wishes to keep some of the info the same, just leave the field empty and press ``ENTER``. After editing the contacts info, the user will see ``Contact Updated Successfully`` and be looped back to the main menu.
+
+When prompted with ``Enter The Number Of The Contact To Edit`` the user must enter a numerical value to proceed. If selected #4 by accident, just select 1 and press ``ENTER`` until looped back to main menu.
