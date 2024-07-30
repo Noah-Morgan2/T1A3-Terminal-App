@@ -93,4 +93,4 @@ If you wish to re-enter the contact book follow steps 4-6 for MacOs/Linux or ste
 # Code Style Guide
 
 This Terminal application refers to [PEP 8](https://peps.python.org/pep-0008/) and [PEP 257](https://peps.python.org/pep-0257/) for its styling guide and adheres to roughly 80% of it.
-( I ran it through a [Style Checker](https://www.codewof.co.nz/style/python3/)and couldn't be bothered to change all my code to be less than 79 characters)
+( I ran it through a [Style Checker](https://www.codewof.co.nz/style/python3/)
